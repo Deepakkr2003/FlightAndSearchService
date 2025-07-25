@@ -10,7 +10,7 @@ const create = async (req, res) => {
             success: true,
             message: 'Successfully created a city',
             err: {}
-        })
+        });
     } catch (error) {
         console.log(error);
         return res.status(500).json({
