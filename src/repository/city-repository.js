@@ -1,4 +1,4 @@
-const {op} = require('sequelize')
+const {Op} = require('sequelize')
 const {City}=require('../models/index');
 
 class CityRepository {
@@ -62,7 +62,7 @@ class CityRepository {
                 const cities = await City.findAll({
                     where:{
                         name:{
-                            [op.startsWith]: filter.name
+                            [Op.startsWith]: filter.name
                         }
                     }
                 })
